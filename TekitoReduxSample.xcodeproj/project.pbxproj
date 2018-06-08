@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7383064720A2E86900CD28E8 /* AppDelegate+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383064620A2E86900CD28E8 /* AppDelegate+Setup.swift */; };
+		7383064920A2E93900CD28E8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383064820A2E93900CD28E8 /* AppState.swift */; };
+		73A01A3A20CA4CEA00B4CA7B /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A01A3920CA4CEA00B4CA7B /* AppReducer.swift */; };
+		73A01A3C20CA507000B4CA7B /* QiitaAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A01A3B20CA507000B4CA7B /* QiitaAPIRequest.swift */; };
+		73A01A3E20CA550D00B4CA7B /* GetUserArticleEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A01A3D20CA550D00B4CA7B /* GetUserArticleEndPoint.swift */; };
+		73A01A4020CA55AE00B4CA7B /* ArticleListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A01A3F20CA55AE00B4CA7B /* ArticleListModel.swift */; };
+		73A01A4320CA61A700B4CA7B /* ArticleAPIActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A01A4220CA61A700B4CA7B /* ArticleAPIActionCreator.swift */; };
+		73A01A4520CA655200B4CA7B /* GetAllArticleEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A01A4420CA655200B4CA7B /* GetAllArticleEndPoint.swift */; };
+		73A01A4820CA6B9C00B4CA7B /* EndPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A01A4720CA6B9C00B4CA7B /* EndPointTests.swift */; };
+		73A01A4A20CA6D0B00B4CA7B /* ArticleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A01A4920CA6D0B00B4CA7B /* ArticleListCell.swift */; };
+		73A01A4D20CA7FC400B4CA7B /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73A01A4C20CA7FC400B4CA7B /* Secrets.plist */; };
 		73ADE96E209323D8004211E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADE96D209323D8004211E1 /* AppDelegate.swift */; };
 		73ADE970209323D8004211E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADE96F209323D8004211E1 /* ViewController.swift */; };
 		73ADE973209323D8004211E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73ADE971209323D8004211E1 /* Main.storyboard */; };
@@ -14,6 +25,31 @@
 		73ADE978209323D8004211E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73ADE976209323D8004211E1 /* LaunchScreen.storyboard */; };
 		73ADE983209323D8004211E1 /* TekitoReduxSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADE982209323D8004211E1 /* TekitoReduxSampleTests.swift */; };
 		73ADE98E209323D8004211E1 /* TekitoReduxSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADE98D209323D8004211E1 /* TekitoReduxSampleUITests.swift */; };
+		73E0A01120C61E3600529FB1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E0A00F20C61E3600529FB1 /* Realm.framework */; };
+		73E0A01220C61E3600529FB1 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73E0A00F20C61E3600529FB1 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73E0A01320C61E3600529FB1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E0A01020C61E3600529FB1 /* RealmSwift.framework */; };
+		73E0A01420C61E3600529FB1 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73E0A01020C61E3600529FB1 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73E0A01B20C62A4800529FB1 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E0A01A20C62A4800529FB1 /* BaseRequest.swift */; };
+		73E0A01D20C62A8900529FB1 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E0A01C20C62A8900529FB1 /* HttpClient.swift */; };
+		73E0A02220C64CCB00529FB1 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E0A02120C64CCB00529FB1 /* Const.swift */; };
+		73E0A02820C65FBB00529FB1 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E0A02720C65FBB00529FB1 /* ArticleModel.swift */; };
+		73E0A02A20C660E600529FB1 /* TagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E0A02920C660E600529FB1 /* TagModel.swift */; };
+		73E0A02C20C662FE00529FB1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E0A02B20C662FE00529FB1 /* UserModel.swift */; };
+		73E0A02F20C6683400529FB1 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E0A02E20C6683400529FB1 /* ModelTests.swift */; };
+		73E0A03720C66F8100529FB1 /* UserArticleList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73E0A03520C66F8100529FB1 /* UserArticleList.storyboard */; };
+		73E0A03920C67C1400529FB1 /* MoreLoadingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E0A03820C67C1400529FB1 /* MoreLoadingFooterView.swift */; };
+		73E0A03B20C67CC000529FB1 /* UserArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E0A03A20C67CC000529FB1 /* UserArticleListViewController.swift */; };
+		73E0A03E20C6802800529FB1 /* ListStateActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E0A03D20C6802800529FB1 /* ListStateActionCreator.swift */; };
+		73E0A04020C6805200529FB1 /* ActionCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E0A03F20C6805200529FB1 /* ActionCreatorTests.swift */; };
+		73E0A04220C6865000529FB1 /* HomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E0A04120C6865000529FB1 /* HomeState.swift */; };
+		73E0A04420C6872A00529FB1 /* ArticleListScreenStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E0A04320C6872A00529FB1 /* ArticleListScreenStateProtocol.swift */; };
+		73E0A04620C68B7100529FB1 /* HomeStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E0A04520C68B7100529FB1 /* HomeStateAction.swift */; };
+		73EEC98D20CA17F4002D2135 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EEC98C20CA17F4002D2135 /* LoadingState.swift */; };
+		73EEC98F20CA186A002D2135 /* LoadingStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EEC98E20CA186A002D2135 /* LoadingStateAction.swift */; };
+		73EEC99120CA1C75002D2135 /* LoadingStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EEC99020CA1C75002D2135 /* LoadingStateReducer.swift */; };
+		7E162FBC652772BD0A424771 /* Pods_TekitoReduxSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880E5A78DA189BD4F441EA80 /* Pods_TekitoReduxSample.framework */; };
+		9075D77249A277079613D39D /* Pods_TekitoReduxSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED2DAC717ACFA098EAF4F60 /* Pods_TekitoReduxSampleUITests.framework */; };
+		DF0F1238F6450A6D85F01A32 /* Pods_TekitoReduxSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDD5F2094E31197948DB9DF /* Pods_TekitoReduxSampleTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +69,37 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		73E0A00E20C61D5300529FB1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				73E0A01420C61E3600529FB1 /* RealmSwift.framework in Embed Frameworks */,
+				73E0A01220C61E3600529FB1 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2DDD5F2094E31197948DB9DF /* Pods_TekitoReduxSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TekitoReduxSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		452E4B2D72825A93D74B29E6 /* Pods-TekitoReduxSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekitoReduxSampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TekitoReduxSampleUITests/Pods-TekitoReduxSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		51121B8E05E82C6EC7E2F25A /* Pods-TekitoReduxSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekitoReduxSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TekitoReduxSample/Pods-TekitoReduxSample.release.xcconfig"; sourceTree = "<group>"; };
+		6B7D5A48AE6708D29B1BCF79 /* Pods-TekitoReduxSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekitoReduxSampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TekitoReduxSampleUITests/Pods-TekitoReduxSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7383064620A2E86900CD28E8 /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
+		7383064820A2E93900CD28E8 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		73A01A3920CA4CEA00B4CA7B /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		73A01A3B20CA507000B4CA7B /* QiitaAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIRequest.swift; sourceTree = "<group>"; };
+		73A01A3D20CA550D00B4CA7B /* GetUserArticleEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserArticleEndPoint.swift; sourceTree = "<group>"; };
+		73A01A3F20CA55AE00B4CA7B /* ArticleListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListModel.swift; sourceTree = "<group>"; };
+		73A01A4220CA61A700B4CA7B /* ArticleAPIActionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleAPIActionCreator.swift; sourceTree = "<group>"; };
+		73A01A4420CA655200B4CA7B /* GetAllArticleEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllArticleEndPoint.swift; sourceTree = "<group>"; };
+		73A01A4720CA6B9C00B4CA7B /* EndPointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointTests.swift; sourceTree = "<group>"; };
+		73A01A4920CA6D0B00B4CA7B /* ArticleListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListCell.swift; sourceTree = "<group>"; };
+		73A01A4C20CA7FC400B4CA7B /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		73ADE96A209323D8004211E1 /* TekitoReduxSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TekitoReduxSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73ADE96D209323D8004211E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73ADE96F209323D8004211E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +113,31 @@
 		73ADE989209323D8004211E1 /* TekitoReduxSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TekitoReduxSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73ADE98D209323D8004211E1 /* TekitoReduxSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekitoReduxSampleUITests.swift; sourceTree = "<group>"; };
 		73ADE98F209323D8004211E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73E0A00F20C61E3600529FB1 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		73E0A01020C61E3600529FB1 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		73E0A01A20C62A4800529FB1 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		73E0A01C20C62A8900529FB1 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		73E0A02120C64CCB00529FB1 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		73E0A02720C65FBB00529FB1 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		73E0A02920C660E600529FB1 /* TagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagModel.swift; sourceTree = "<group>"; };
+		73E0A02B20C662FE00529FB1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		73E0A02E20C6683400529FB1 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		73E0A03620C66F8100529FB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserArticleList.storyboard; sourceTree = "<group>"; };
+		73E0A03820C67C1400529FB1 /* MoreLoadingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLoadingFooterView.swift; sourceTree = "<group>"; };
+		73E0A03A20C67CC000529FB1 /* UserArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserArticleListViewController.swift; sourceTree = "<group>"; };
+		73E0A03D20C6802800529FB1 /* ListStateActionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStateActionCreator.swift; sourceTree = "<group>"; };
+		73E0A03F20C6805200529FB1 /* ActionCreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCreatorTests.swift; sourceTree = "<group>"; };
+		73E0A04120C6865000529FB1 /* HomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeState.swift; sourceTree = "<group>"; };
+		73E0A04320C6872A00529FB1 /* ArticleListScreenStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListScreenStateProtocol.swift; sourceTree = "<group>"; };
+		73E0A04520C68B7100529FB1 /* HomeStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStateAction.swift; sourceTree = "<group>"; };
+		73EEC98C20CA17F4002D2135 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		73EEC98E20CA186A002D2135 /* LoadingStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateAction.swift; sourceTree = "<group>"; };
+		73EEC99020CA1C75002D2135 /* LoadingStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateReducer.swift; sourceTree = "<group>"; };
+		7ED2DAC717ACFA098EAF4F60 /* Pods_TekitoReduxSampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TekitoReduxSampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86DA85C4059133834C5E99B8 /* Pods-TekitoReduxSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekitoReduxSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TekitoReduxSampleTests/Pods-TekitoReduxSampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		880E5A78DA189BD4F441EA80 /* Pods_TekitoReduxSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TekitoReduxSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		946BB59D12501B75DD7079B4 /* Pods-TekitoReduxSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekitoReduxSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TekitoReduxSample/Pods-TekitoReduxSample.debug.xcconfig"; sourceTree = "<group>"; };
+		D0860B5B889C0C5F3871D5B0 /* Pods-TekitoReduxSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekitoReduxSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TekitoReduxSampleTests/Pods-TekitoReduxSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +145,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73E0A01120C61E3600529FB1 /* Realm.framework in Frameworks */,
+				7E162FBC652772BD0A424771 /* Pods_TekitoReduxSample.framework in Frameworks */,
+				73E0A01320C61E3600529FB1 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0F1238F6450A6D85F01A32 /* Pods_TekitoReduxSampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,19 +163,140 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9075D77249A277079613D39D /* Pods_TekitoReduxSampleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31CB72ADAD4D86E97D26573D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				946BB59D12501B75DD7079B4 /* Pods-TekitoReduxSample.debug.xcconfig */,
+				51121B8E05E82C6EC7E2F25A /* Pods-TekitoReduxSample.release.xcconfig */,
+				D0860B5B889C0C5F3871D5B0 /* Pods-TekitoReduxSampleTests.debug.xcconfig */,
+				86DA85C4059133834C5E99B8 /* Pods-TekitoReduxSampleTests.release.xcconfig */,
+				452E4B2D72825A93D74B29E6 /* Pods-TekitoReduxSampleUITests.debug.xcconfig */,
+				6B7D5A48AE6708D29B1BCF79 /* Pods-TekitoReduxSampleUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5533DDB7ABF90D3802B10150 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				880E5A78DA189BD4F441EA80 /* Pods_TekitoReduxSample.framework */,
+				2DDD5F2094E31197948DB9DF /* Pods_TekitoReduxSampleTests.framework */,
+				7ED2DAC717ACFA098EAF4F60 /* Pods_TekitoReduxSampleUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7383063F20A2E78B00CD28E8 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				7383064220A2E7A800CD28E8 /* States */,
+				7383064120A2E79E00CD28E8 /* Reducers */,
+				7383064020A2E79800CD28E8 /* Actions */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		7383064020A2E79800CD28E8 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				73E0A03C20C67FF900529FB1 /* Creators */,
+				73E0A04520C68B7100529FB1 /* HomeStateAction.swift */,
+				73EEC98E20CA186A002D2135 /* LoadingStateAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		7383064120A2E79E00CD28E8 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				73EEC99020CA1C75002D2135 /* LoadingStateReducer.swift */,
+				73A01A3920CA4CEA00B4CA7B /* AppReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		7383064220A2E7A800CD28E8 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				7383064820A2E93900CD28E8 /* AppState.swift */,
+				73E0A04120C6865000529FB1 /* HomeState.swift */,
+				73E0A04320C6872A00529FB1 /* ArticleListScreenStateProtocol.swift */,
+				73EEC98C20CA17F4002D2135 /* LoadingState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		7383064320A2E7C500CD28E8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				73ADE971209323D8004211E1 /* Main.storyboard */,
+				73ADE976209323D8004211E1 /* LaunchScreen.storyboard */,
+				73E0A03520C66F8100529FB1 /* UserArticleList.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7383064420A2E7DE00CD28E8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				73ADE96F209323D8004211E1 /* ViewController.swift */,
+				73E0A03A20C67CC000529FB1 /* UserArticleListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7383064520A2E80100CD28E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				73E0A03820C67C1400529FB1 /* MoreLoadingFooterView.swift */,
+				73A01A4920CA6D0B00B4CA7B /* ArticleListCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7383064E20A2EEC300CD28E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				73E0A02620C65F9E00529FB1 /* Entity */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		73A01A4120CA5D8200B4CA7B /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				73A01A3D20CA550D00B4CA7B /* GetUserArticleEndPoint.swift */,
+				73A01A4420CA655200B4CA7B /* GetAllArticleEndPoint.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		73A01A4B20CA7F8000B4CA7B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				73A01A4C20CA7FC400B4CA7B /* Secrets.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		73ADE961209323D8004211E1 = {
 			isa = PBXGroup;
 			children = (
+				73E0A00F20C61E3600529FB1 /* Realm.framework */,
+				73E0A01020C61E3600529FB1 /* RealmSwift.framework */,
 				73ADE96C209323D8004211E1 /* TekitoReduxSample */,
 				73ADE981209323D8004211E1 /* TekitoReduxSampleTests */,
 				73ADE98C209323D8004211E1 /* TekitoReduxSampleUITests */,
 				73ADE96B209323D8004211E1 /* Products */,
+				31CB72ADAD4D86E97D26573D /* Pods */,
+				5533DDB7ABF90D3802B10150 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +314,17 @@
 			isa = PBXGroup;
 			children = (
 				73ADE96D209323D8004211E1 /* AppDelegate.swift */,
-				73ADE96F209323D8004211E1 /* ViewController.swift */,
-				73ADE971209323D8004211E1 /* Main.storyboard */,
+				7383064620A2E86900CD28E8 /* AppDelegate+Setup.swift */,
+				7383064520A2E80100CD28E8 /* Views */,
+				7383064420A2E7DE00CD28E8 /* ViewControllers */,
+				7383064320A2E7C500CD28E8 /* Storyboards */,
+				73E0A01920C62A2C00529FB1 /* Connects */,
+				7383064E20A2EEC300CD28E8 /* Models */,
+				7383063F20A2E78B00CD28E8 /* Redux */,
+				73A01A4B20CA7F8000B4CA7B /* Resource */,
 				73ADE974209323D8004211E1 /* Assets.xcassets */,
-				73ADE976209323D8004211E1 /* LaunchScreen.storyboard */,
 				73ADE979209323D8004211E1 /* Info.plist */,
+				73E0A02120C64CCB00529FB1 /* Const.swift */,
 			);
 			path = TekitoReduxSample;
 			sourceTree = "<group>";
@@ -110,7 +332,11 @@
 		73ADE981209323D8004211E1 /* TekitoReduxSampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				73A01A4720CA6B9C00B4CA7B /* EndPointTests.swift */,
+				73E0A02E20C6683400529FB1 /* ModelTests.swift */,
+				73E0A03F20C6805200529FB1 /* ActionCreatorTests.swift */,
 				73ADE982209323D8004211E1 /* TekitoReduxSampleTests.swift */,
+				73E0A03020C668A400529FB1 /* Json */,
 				73ADE984209323D8004211E1 /* Info.plist */,
 			);
 			path = TekitoReduxSampleTests;
@@ -125,6 +351,44 @@
 			path = TekitoReduxSampleUITests;
 			sourceTree = "<group>";
 		};
+		73E0A01920C62A2C00529FB1 /* Connects */ = {
+			isa = PBXGroup;
+			children = (
+				73A01A4120CA5D8200B4CA7B /* EndPoints */,
+				73E0A01A20C62A4800529FB1 /* BaseRequest.swift */,
+				73E0A01C20C62A8900529FB1 /* HttpClient.swift */,
+				73A01A3B20CA507000B4CA7B /* QiitaAPIRequest.swift */,
+			);
+			path = Connects;
+			sourceTree = "<group>";
+		};
+		73E0A02620C65F9E00529FB1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				73E0A02720C65FBB00529FB1 /* ArticleModel.swift */,
+				73E0A02920C660E600529FB1 /* TagModel.swift */,
+				73E0A02B20C662FE00529FB1 /* UserModel.swift */,
+				73A01A3F20CA55AE00B4CA7B /* ArticleListModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		73E0A03020C668A400529FB1 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		73E0A03C20C67FF900529FB1 /* Creators */ = {
+			isa = PBXGroup;
+			children = (
+				73E0A03D20C6802800529FB1 /* ListStateActionCreator.swift */,
+				73A01A4220CA61A700B4CA7B /* ArticleAPIActionCreator.swift */,
+			);
+			path = Creators;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +396,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73ADE992209323D8004211E1 /* Build configuration list for PBXNativeTarget "TekitoReduxSample" */;
 			buildPhases = (
+				6A1E88956091461FD1BC9A3A /* [CP] Check Pods Manifest.lock */,
 				73ADE966209323D8004211E1 /* Sources */,
 				73ADE967209323D8004211E1 /* Frameworks */,
 				73ADE968209323D8004211E1 /* Resources */,
+				6A039FC8E94CCB07785A6A7C /* [CP] Embed Pods Frameworks */,
+				7383065120A2F06100CD28E8 /* Run Script - SwiftLint */,
+				73E0A00E20C61D5300529FB1 /* Embed Frameworks */,
+				73E0A01520C61EDC00529FB1 /* Run Script - Realm */,
+				73E0A03220C66E9800529FB1 /* Run Script - R.swift */,
 			);
 			buildRules = (
 			);
@@ -149,9 +419,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73ADE995209323D8004211E1 /* Build configuration list for PBXNativeTarget "TekitoReduxSampleTests" */;
 			buildPhases = (
+				6ACC0EF74A6BE2AE2FEAA0D6 /* [CP] Check Pods Manifest.lock */,
 				73ADE97A209323D8004211E1 /* Sources */,
 				73ADE97B209323D8004211E1 /* Frameworks */,
 				73ADE97C209323D8004211E1 /* Resources */,
+				586A4A9C9371B7D1B03E7067 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +439,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73ADE998209323D8004211E1 /* Build configuration list for PBXNativeTarget "TekitoReduxSampleUITests" */;
 			buildPhases = (
+				FFB96F9611B207EF521A4B60 /* [CP] Check Pods Manifest.lock */,
 				73ADE985209323D8004211E1 /* Sources */,
 				73ADE986209323D8004211E1 /* Frameworks */,
 				73ADE987209323D8004211E1 /* Resources */,
@@ -232,6 +505,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73E0A03720C66F8100529FB1 /* UserArticleList.storyboard in Resources */,
+				73A01A4D20CA7FC400B4CA7B /* Secrets.plist in Resources */,
 				73ADE978209323D8004211E1 /* LaunchScreen.storyboard in Resources */,
 				73ADE975209323D8004211E1 /* Assets.xcassets in Resources */,
 				73ADE973209323D8004211E1 /* Main.storyboard in Resources */,
@@ -254,13 +529,184 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		586A4A9C9371B7D1B03E7067 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TekitoReduxSampleTests/Pods-TekitoReduxSampleTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TekitoReduxSampleTests/Pods-TekitoReduxSampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A039FC8E94CCB07785A6A7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TekitoReduxSample/Pods-TekitoReduxSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TekitoReduxSample/Pods-TekitoReduxSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A1E88956091461FD1BC9A3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TekitoReduxSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6ACC0EF74A6BE2AE2FEAA0D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TekitoReduxSampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7383065120A2F06100CD28E8 /* Run Script - SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		73E0A01520C61EDC00529FB1 /* Run Script - Realm */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - Realm";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+		73E0A03220C66E9800529FB1 /* Run Script - R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - R.swift";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+		};
+		FFB96F9611B207EF521A4B60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TekitoReduxSampleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		73ADE966209323D8004211E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73E0A02A20C660E600529FB1 /* TagModel.swift in Sources */,
+				73A01A3C20CA507000B4CA7B /* QiitaAPIRequest.swift in Sources */,
+				73EEC98D20CA17F4002D2135 /* LoadingState.swift in Sources */,
+				73E0A04220C6865000529FB1 /* HomeState.swift in Sources */,
+				73E0A04420C6872A00529FB1 /* ArticleListScreenStateProtocol.swift in Sources */,
+				73E0A03920C67C1400529FB1 /* MoreLoadingFooterView.swift in Sources */,
+				73E0A04620C68B7100529FB1 /* HomeStateAction.swift in Sources */,
+				73EEC98F20CA186A002D2135 /* LoadingStateAction.swift in Sources */,
+				73E0A01D20C62A8900529FB1 /* HttpClient.swift in Sources */,
 				73ADE970209323D8004211E1 /* ViewController.swift in Sources */,
+				73E0A03E20C6802800529FB1 /* ListStateActionCreator.swift in Sources */,
 				73ADE96E209323D8004211E1 /* AppDelegate.swift in Sources */,
+				73A01A4320CA61A700B4CA7B /* ArticleAPIActionCreator.swift in Sources */,
+				7383064720A2E86900CD28E8 /* AppDelegate+Setup.swift in Sources */,
+				7383064920A2E93900CD28E8 /* AppState.swift in Sources */,
+				73E0A01B20C62A4800529FB1 /* BaseRequest.swift in Sources */,
+				73A01A3A20CA4CEA00B4CA7B /* AppReducer.swift in Sources */,
+				73A01A4020CA55AE00B4CA7B /* ArticleListModel.swift in Sources */,
+				73E0A02220C64CCB00529FB1 /* Const.swift in Sources */,
+				73E0A02C20C662FE00529FB1 /* UserModel.swift in Sources */,
+				73A01A4A20CA6D0B00B4CA7B /* ArticleListCell.swift in Sources */,
+				73E0A02820C65FBB00529FB1 /* ArticleModel.swift in Sources */,
+				73EEC99120CA1C75002D2135 /* LoadingStateReducer.swift in Sources */,
+				73E0A03B20C67CC000529FB1 /* UserArticleListViewController.swift in Sources */,
+				73A01A4520CA655200B4CA7B /* GetAllArticleEndPoint.swift in Sources */,
+				73A01A3E20CA550D00B4CA7B /* GetUserArticleEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +714,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73E0A02F20C6683400529FB1 /* ModelTests.swift in Sources */,
 				73ADE983209323D8004211E1 /* TekitoReduxSampleTests.swift in Sources */,
+				73A01A4820CA6B9C00B4CA7B /* EndPointTests.swift in Sources */,
+				73E0A04020C6805200529FB1 /* ActionCreatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +759,14 @@
 				73ADE977209323D8004211E1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		73E0A03520C66F8100529FB1 /* UserArticleList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73E0A03620C66F8100529FB1 /* Base */,
+			);
+			name = UserArticleList.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -424,13 +881,23 @@
 		};
 		73ADE993209323D8004211E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 946BB59D12501B75DD7079B4 /* Pods-TekitoReduxSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vendor",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TekitoReduxSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tekito.unuma.TekitoReduxSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -438,13 +905,22 @@
 		};
 		73ADE994209323D8004211E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51121B8E05E82C6EC7E2F25A /* Pods-TekitoReduxSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vendor",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TekitoReduxSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tekito.unuma.TekitoReduxSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,8 +928,9 @@
 		};
 		73ADE996209323D8004211E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0860B5B889C0C5F3871D5B0 /* Pods-TekitoReduxSampleTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TekitoReduxSampleTests/Info.plist;
@@ -468,8 +945,9 @@
 		};
 		73ADE997209323D8004211E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86DA85C4059133834C5E99B8 /* Pods-TekitoReduxSampleTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TekitoReduxSampleTests/Info.plist;
@@ -484,8 +962,9 @@
 		};
 		73ADE999209323D8004211E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 452E4B2D72825A93D74B29E6 /* Pods-TekitoReduxSampleUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TekitoReduxSampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -499,8 +978,9 @@
 		};
 		73ADE99A209323D8004211E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B7D5A48AE6708D29B1BCF79 /* Pods-TekitoReduxSampleUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TekitoReduxSampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

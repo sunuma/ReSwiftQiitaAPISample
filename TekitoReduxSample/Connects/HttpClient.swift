@@ -11,7 +11,6 @@ import Alamofire
 
 struct HttpsClient {
     func request<T: BaseRequest>(_ request: T, success: @escaping (Decodable) -> Void, failure: @escaping ((ApiError) -> Void)) {
-
         let endPoint    = request.baseUrl
         let params      = request.parameters
         let headers     = request.httpHeaderFields
@@ -21,18 +20,24 @@ struct HttpsClient {
             .validate(statusCode: 200..<300)
             .responseJSON(completionHandler: { response in
                 if let error = response.result.error {
+                    appDump(error)
                     failure(.resultError(error))
                     return
                 }
                 if let data = response.data, let responseData = response.response {
                     guard let model = request.response(from: data, response: responseData) else {
-                        failure(.parseError("failed to \(String(describing: T.Response.self)) class json parse."))
+                        let message = "failed to \(String(describing: T.Response.self)).class json parse."
+                        appPrint(message)
+                        failure(.parseError(message))
                         return
                     }
                     if let decodableData = model as? Decodable {
+                        appDump(decodableData)
                         success(decodableData)
                     } else {
-                        failure(.castError("failed to \(String(describing: T.Response.self)).class cast."))
+                        let message = "failed to \(String(describing: T.Response.self)).class cast."
+                        appPrint(message)
+                        failure(.castError(message))
                     }
                 } else {
                     var message = ""
@@ -42,10 +47,11 @@ struct HttpsClient {
                     if response.response == nil {
                         message += "response.response is nil"
                     }
+                    appPrint(message)
                     failure(.invalidResponse(message))
                 }
             })
-        print("request = \(req.description)")
+        appPrint("request = \(req.description)")
     }
 }
 

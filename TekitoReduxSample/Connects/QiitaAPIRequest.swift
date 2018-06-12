@@ -33,8 +33,8 @@ extension QiitaAPIRequest where Response: Decodable {
             let decodeData = try decoder.decode(Response.self, from: data)
             return decodeData
         } catch {
-            print("Failed to decode json data. \n\(String(data: data, encoding: .utf8) ?? "")")
-            print("\(error.localizedDescription)")
+            //print("Failed to decode json data. \n\(String(data: data, encoding: .utf8) ?? "")")
+            print("request error = \(error.localizedDescription)")
             fatalError()
         }
         return nil

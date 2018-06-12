@@ -21,10 +21,6 @@ struct ArticleModel: Decodable {
     private(set) var createdAt: String?
     private(set) var updatedAt: String?
     
-    static func primaryKey() -> String? {
-        return "id"
-    }
-    
     private enum CodingKeys: String, CodingKey {
         case id
         case isPrivate      = "private"

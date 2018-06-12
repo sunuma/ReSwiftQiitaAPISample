@@ -26,11 +26,10 @@ class EndPointTests: XCTestCase {
     
     func testGetAllArticleEndPoint() {
         let exp = expectation(description: "GetAllArticleEndPoint Method Test")
-        let param = GetArticleEndpointParam(perPage: 20, page: 0)
+        let param = GetArticleEndpointParam(perPage: 20, page: 1)
         let request = GetAllArticleEndPoint(param: param)
         HttpsClient().request(request, success: { result in
-            if let articleListModel = result as? ArticleListModel {
-                print("articleModels = %@", articleListModel.articleModels?.debugDescription)
+            if result is ArticleListModel {
                 XCTAssertNotNil(result)
             } else {
                 XCTAssert(false)

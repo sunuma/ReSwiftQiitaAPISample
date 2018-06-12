@@ -11,7 +11,7 @@ import ReSwift
 
 struct ArticleAPIActionCreator {
     static func call<T: QiitaAPIRequest>(request: T,
-                                         success: @escaping (ArticleListModel) -> Void,
+                                         success: @escaping ((ArticleListModel) -> Void),
                                          failed: @escaping (ApiError) -> Void) -> Store<AppState>.ActionCreator {
         return { state, store in
             HttpsClient().request(request, success: { decodable in

@@ -20,14 +20,32 @@ protocol ArticleListScreenStateProtocol {
 }
 
 extension ArticleListScreenStateProtocol {
-    func fetchArticle(index: Int) -> ArticleModel {
+    mutating func updateArticleList(articleList: [ArticleModel]?) {
+        self.articleList = articleList
+    }
+    
+    mutating func append(articleList: [ArticleModel]?) {
+        guard let list = articleList else { return }
+        self.articleList?.append(contentsOf: list)
+        incrementPageNumber()
+    }
+    
+    mutating func updateErrorMessage(error: ApiError) {
+        self.errorMessage = error.errorDescription()
+    }
+    
+    mutating func fetchArticle(index: Int) -> ArticleModel {
         guard let articleList = articleList, articleList.count > index else {
             return ArticleModel()
         }
         return articleList[index]
     }
     
-    func fetchArticleListCount() -> Int {
+    mutating func fetchArticleListCount() -> Int {
         return articleList?.count ?? 0
+    }
+    
+    mutating func incrementPageNumber() {
+        pageNumber += 1
     }
 }

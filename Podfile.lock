@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.7.2)
+  - AlamofireImage (3.3.1):
+    - Alamofire (~> 4.5)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
@@ -14,6 +16,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - AlamofireImage
   - R.swift
   - ReSwift
   - RxBlocking
@@ -24,6 +27,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - AlamofireImage
     - R.swift
     - R.swift.Library
     - ReSwift
@@ -34,6 +38,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
@@ -42,6 +47,6 @@ SPEC CHECKSUMS:
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   RxTest: e634f15fd2c2cd0e0120132ef7a4f7be69ad0393
 
-PODFILE CHECKSUM: 5522cdddcd12855059ff1da80ef13e89af9f7d90
+PODFILE CHECKSUM: d480cb3b5add09460470c85549affe0f705a4d9e
 
 COCOAPODS: 1.5.0

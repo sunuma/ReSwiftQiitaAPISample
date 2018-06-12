@@ -9,14 +9,13 @@
 import Foundation
 import Alamofire
 
-
 struct GetAllArticleEndPoint: QiitaAPIRequest {
     typealias Response = ArticleListModel
     var method: HTTPMethod {
         return .get
     }
     var path: String {
-        return "/api/v2/items"
+        return "api/v2/items"
     }
     var parameters: [String: Any]?
     

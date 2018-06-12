@@ -7,6 +7,7 @@ target 'TekitoReduxSample' do
 
   # Pods for TekitoReduxSample
   pod 'Alamofire'
+  pod 'AlamofireImage'
   pod 'ReSwift'
   pod 'RxSwift'
   pod 'RxCocoa'

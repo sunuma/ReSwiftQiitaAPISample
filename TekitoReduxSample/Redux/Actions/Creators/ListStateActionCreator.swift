@@ -15,6 +15,7 @@ protocol ListStateActionCreatorProtocol {
     func generateResultAction(_ result: Decodable) -> Store<AppState>.ActionCreator
     func generateResultErrorAdtion(_ error: ApiError) -> Store<AppState>.ActionCreator
     func generateShowMoreLoadingAction(_ isLoading: Bool) -> Store<AppState>.ActionCreator
+    func generateMoreListResultAction(_ result: Decodable) -> Store<AppState>.ActionCreator
     func generateFinishMoreListAction(_ isFinish: Bool) -> Store<AppState>.ActionCreator
     func generateResetListAction() -> Store<AppState>.ActionCreator
 }
@@ -47,6 +48,12 @@ struct HomeStateActionCreator: ListStateActionCreatorProtocol {
     func generateShowMoreLoadingAction(_ isLoading: Bool) -> Store<AppState>.ActionCreator {
         return { (state: AppState, store: Store<AppState>) in
             return HomeState.HomeShowMoreLoadingAction(isLoading: isLoading)
+        }
+    }
+    
+    func generateMoreListResultAction(_ result: Decodable) -> Store<AppState>.ActionCreator {
+        return { (state: AppState, store: Store<AppState>) in
+            return HomeState.HomeMoreArticleResultAction(result: result)
         }
     }
     

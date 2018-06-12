@@ -11,13 +11,31 @@ import ReSwift
 
 let mainStore = Store(reducer: appReducer, state: nil)
 
+func appPrint(_ items: Any...) {
+    #if DEBUG
+    Swift.print(items)
+    #endif
+}
+
+func appDump<T>(_ value: T) {
+    #if DEBUG
+    Swift.dump(value)
+    #endif
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    
+    mainStore.subscribe(self)
+    window = UIWindow(frame: UIScreen.main.bounds)
+    let vc = R.storyboard.userArticleList.instantiateInitialViewController()!
+    vc.inject(listState: mainStore.state.home, listActionCreator: HomeStateActionCreator())
+    let nav = UINavigationController(rootViewController: vc)
+    window?.rootViewController = nav
+    window?.makeKeyAndVisible()
     return true
   }
 

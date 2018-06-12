@@ -11,3 +11,19 @@ import Foundation
 struct ArticleListModel: Decodable {
     var articleModels: [ArticleModel]?
 }
+
+extension ArticleListModel {
+    init(from decoder: Decoder) {
+        var list: [ArticleModel] = []
+        do {
+            var unkeyedContainer = try decoder.unkeyedContainer()
+            while !unkeyedContainer.isAtEnd {
+                let article = try unkeyedContainer.decode(ArticleModel.self)
+                list.append(article)
+            }
+        } catch {
+            print("ArticleListModel initialize error = \(error.localizedDescription)")
+        }
+        self.init(articleModels: list)
+    }
+}

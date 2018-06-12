@@ -9,5 +9,10 @@
 import Foundation
 import ReSwift
 
-extension AppDelegate {
+extension AppDelegate: StoreSubscriber {
+    typealias StoreSubscriberStateType = AppState
+    
+    func newState(state: AppState) {
+        
+    }
 }

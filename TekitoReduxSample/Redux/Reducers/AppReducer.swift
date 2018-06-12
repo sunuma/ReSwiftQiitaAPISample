@@ -9,6 +9,7 @@
 import Foundation
 import ReSwift
 
-func appReducer(_ action: Action, _ state: AppState?) -> AppState {
-    return state ?? AppState()
+func appReducer(action: Action, state: AppState?) -> AppState {
+    return AppState(loading: loadingStateReducer(action: action, state: state?.loading),
+                    home: homeStateReducer(action: action, state: state?.home))
 }

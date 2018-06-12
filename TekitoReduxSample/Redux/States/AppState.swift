@@ -10,6 +10,6 @@ import Foundation
 import ReSwift
 
 struct AppState: StateType {
-    var loading = LoadingState()
-    var hone = HomeState()
+    var loading: LoadingState
+    var home: HomeState
 }

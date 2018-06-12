@@ -9,15 +9,13 @@
 import Foundation
 import ReSwift
 
-func loadingStateReducer(_ action: Action, _ state: AppState?) -> AppState {
-    let state = state ?? AppState()
+func loadingStateReducer(action: Action, state: LoadingState?) -> LoadingState {
+    let state = state ?? LoadingState()
     var newState = state
-    var loadingState = newState.loading
     switch action {
     case let action as LoadingState.LoadingAction:
-        loadingState.updateIsLoading(isLoading: action.isLoading)
+        newState.updateIsLoading(isLoading: action.isLoading)
     default: break
     }
-    newState.loading = loadingState
     return newState
 }

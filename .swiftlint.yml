@@ -12,9 +12,10 @@ excluded:
   - Carthage
   - Pods
   - vendor
+  - R.generated.swift
 line_length: 300
 
 # 変数名が２文字以上なら許可に変更
 identifier_name:
-  min_length: 2
+  min_length: 1
 

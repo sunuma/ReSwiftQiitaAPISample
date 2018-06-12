@@ -9,7 +9,6 @@
 import Foundation
 import Alamofire
 
-
 struct GetUserArticleEndpoint: QiitaAPIRequest {
     typealias Response = ArticleListModel
     var method: HTTPMethod {

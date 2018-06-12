@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import AlamofireImage
+
+enum CellHeightType: CGFloat {
+    case articleList = 100
+}
 
 class ArticleListCell: UITableViewCell {
     
@@ -28,8 +33,7 @@ class ArticleListCell: UITableViewCell {
         titleLabel.text = article.fetchArticleTitle()
         tagLabel.text = article.fetchTags()
         
-        guard let downloadURL = article.fetchDownloadURL() else { return }
-        //let resource = Resource(downloadURL: downloadURL, cacheKey: article.fetchId())
-        //downloadProfileImage(resource)
+        guard let url = article.fetchDownloadURL() else { return }
+        self.profileImageView.af_setImage(withURL: url)
     }
 }

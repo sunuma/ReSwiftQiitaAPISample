@@ -9,7 +9,7 @@
 import Foundation
 
 class UserModel: Decodable {
-    var permanentId: String?
+    var permanentId: Int?
     var id: String?
     var name: String?
     var location: String?
@@ -24,10 +24,6 @@ class UserModel: Decodable {
     var organization: String?
     var websiteUrl: String?
     var description: String?
-    
-    static func primaryKey() -> String? {
-        return "id"
-    }
     
     private enum CodingKeys: String, CodingKey {
         case permanentId        = "permanent_id"

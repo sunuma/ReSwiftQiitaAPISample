@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73003CC820CF570500F84293 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73003CC720CF570500F84293 /* R.generated.swift */; };
+		73003CCB20CF692200F84293 /* HomeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73003CCA20CF692200F84293 /* HomeReducer.swift */; };
 		7383064720A2E86900CD28E8 /* AppDelegate+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383064620A2E86900CD28E8 /* AppDelegate+Setup.swift */; };
 		7383064920A2E93900CD28E8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383064820A2E93900CD28E8 /* AppState.swift */; };
 		73A01A3A20CA4CEA00B4CA7B /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A01A3920CA4CEA00B4CA7B /* AppReducer.swift */; };
@@ -89,6 +91,8 @@
 		452E4B2D72825A93D74B29E6 /* Pods-TekitoReduxSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekitoReduxSampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TekitoReduxSampleUITests/Pods-TekitoReduxSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		51121B8E05E82C6EC7E2F25A /* Pods-TekitoReduxSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekitoReduxSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TekitoReduxSample/Pods-TekitoReduxSample.release.xcconfig"; sourceTree = "<group>"; };
 		6B7D5A48AE6708D29B1BCF79 /* Pods-TekitoReduxSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekitoReduxSampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TekitoReduxSampleUITests/Pods-TekitoReduxSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		73003CC720CF570500F84293 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		73003CCA20CF692200F84293 /* HomeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducer.swift; sourceTree = "<group>"; };
 		7383064620A2E86900CD28E8 /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
 		7383064820A2E93900CD28E8 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		73A01A3920CA4CEA00B4CA7B /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
@@ -216,8 +220,9 @@
 		7383064120A2E79E00CD28E8 /* Reducers */ = {
 			isa = PBXGroup;
 			children = (
-				73EEC99020CA1C75002D2135 /* LoadingStateReducer.swift */,
 				73A01A3920CA4CEA00B4CA7B /* AppReducer.swift */,
+				73EEC99020CA1C75002D2135 /* LoadingStateReducer.swift */,
+				73003CCA20CF692200F84293 /* HomeReducer.swift */,
 			);
 			path = Reducers;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 		73ADE961209323D8004211E1 = {
 			isa = PBXGroup;
 			children = (
+				73003CC720CF570500F84293 /* R.generated.swift */,
 				73E0A00F20C61E3600529FB1 /* Realm.framework */,
 				73E0A01020C61E3600529FB1 /* RealmSwift.framework */,
 				73ADE96C209323D8004211E1 /* TekitoReduxSample */,
@@ -560,6 +566,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TekitoReduxSample/Pods-TekitoReduxSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -568,6 +575,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -654,7 +662,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
 		};
 		FFB96F9611B207EF521A4B60 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -696,11 +704,13 @@
 				73A01A4320CA61A700B4CA7B /* ArticleAPIActionCreator.swift in Sources */,
 				7383064720A2E86900CD28E8 /* AppDelegate+Setup.swift in Sources */,
 				7383064920A2E93900CD28E8 /* AppState.swift in Sources */,
+				73003CCB20CF692200F84293 /* HomeReducer.swift in Sources */,
 				73E0A01B20C62A4800529FB1 /* BaseRequest.swift in Sources */,
 				73A01A3A20CA4CEA00B4CA7B /* AppReducer.swift in Sources */,
 				73A01A4020CA55AE00B4CA7B /* ArticleListModel.swift in Sources */,
 				73E0A02220C64CCB00529FB1 /* Const.swift in Sources */,
 				73E0A02C20C662FE00529FB1 /* UserModel.swift in Sources */,
+				73003CC820CF570500F84293 /* R.generated.swift in Sources */,
 				73A01A4A20CA6D0B00B4CA7B /* ArticleListCell.swift in Sources */,
 				73E0A02820C65FBB00529FB1 /* ArticleModel.swift in Sources */,
 				73EEC99120CA1C75002D2135 /* LoadingStateReducer.swift in Sources */,

@@ -43,6 +43,14 @@ extension ArticleModel: Equatable {
 }
 
 extension ArticleModel {
+    func fetchId() -> String {
+        return id ?? ""
+    }
+    
+    func fetchUserId() -> String {
+        return user?.id ?? ""
+    }
+    
     func fetchPostedInfo() -> String {
         guard let userId = user?.id else {
             return ""
@@ -67,5 +75,9 @@ extension ArticleModel {
             return ""
         }
         return tags.flatMap { $0.name }.joined(separator: ",")
+    }
+    
+    func fetchRenderedBody() -> String {
+        return renderedBody ?? ""
     }
 }

@@ -16,14 +16,14 @@ func homeStateReducer(action: Action, state: HomeState?) -> HomeState {
     switch action {
     case let action as HomeState.HomeArticleResultAction:
         if let articleList = action.result as? ArticleListModel {
-            newState.updateArticleList(articleList: articleList.articleModels)
+            newState.update(articleList: articleList.articleModels)
         }
     case let action as HomeState.HomeArticleResultErrorAction:
         newState.updateErrorMessage(error: action.error)
 //    case let action as HomeState.HomeFinishMoreArticleAction:
     case let action as HomeState.HomeMoreArticleResultAction:
-        if let articleList = action.result as? ArticleListModel {
-            newState.append(articleList: articleList.articleModels)
+        if let articleList = action.result as? [ArticleModel] {
+            newState.append(articleList: articleList)
         }
     default: break
     }

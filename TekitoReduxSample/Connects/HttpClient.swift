@@ -32,7 +32,7 @@ struct HttpsClient {
                         return
                     }
                     if let decodableData = model as? Decodable {
-                        appDump(decodableData)
+                        //appDump(decodableData)
                         success(decodableData)
                     } else {
                         let message = "failed to \(String(describing: T.Response.self)).class cast."

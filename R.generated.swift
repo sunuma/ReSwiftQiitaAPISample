@@ -50,8 +50,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 4 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `ArticleDetailBodyCell`.
+    static let articleDetailBodyCell: Rswift.ReuseIdentifier<ArticleDetailBodyCell> = Rswift.ReuseIdentifier(identifier: "ArticleDetailBodyCell")
+    /// Reuse identifier `ArticleDetailTopInfoCell`.
+    static let articleDetailTopInfoCell: Rswift.ReuseIdentifier<ArticleDetailTopInfoCell> = Rswift.ReuseIdentifier(identifier: "ArticleDetailTopInfoCell")
+    /// Reuse identifier `UserArticleDetailTopInfoCell`.
+    static let userArticleDetailTopInfoCell: Rswift.ReuseIdentifier<ArticleDetailTopInfoCell> = Rswift.ReuseIdentifier(identifier: "UserArticleDetailTopInfoCell")
     /// Reuse identifier `UserArticleListCell`.
     static let userArticleListCell: Rswift.ReuseIdentifier<ArticleListCell> = Rswift.ReuseIdentifier(identifier: "UserArticleListCell")
     
@@ -63,14 +69,23 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 5 storyboards.
   struct storyboard {
+    /// Storyboard `ArticleDetail`.
+    static let articleDetail = _R.storyboard.articleDetail()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
+    /// Storyboard `UserArticleDetail`.
+    static let userArticleDetail = _R.storyboard.userArticleDetail()
     /// Storyboard `UserArticleList`.
     static let userArticleList = _R.storyboard.userArticleList()
+    
+    /// `UIStoryboard(name: "ArticleDetail", bundle: ...)`
+    static func articleDetail(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.articleDetail)
+    }
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
@@ -80,6 +95,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "Main", bundle: ...)`
     static func main(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.main)
+    }
+    
+    /// `UIStoryboard(name: "UserArticleDetail", bundle: ...)`
+    static func userArticleDetail(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.userArticleDetail)
     }
     
     /// `UIStoryboard(name: "UserArticleList", bundle: ...)`
@@ -114,6 +134,15 @@ struct _R {
   }
   
   struct storyboard {
+    struct articleDetail: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = ArticleDetailViewController
+      
+      let bundle = R.hostingBundle
+      let name = "ArticleDetail"
+      
+      fileprivate init() {}
+    }
+    
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
       typealias InitialController = UIKit.UIViewController
       
@@ -128,6 +157,15 @@ struct _R {
       
       let bundle = R.hostingBundle
       let name = "Main"
+      
+      fileprivate init() {}
+    }
+    
+    struct userArticleDetail: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = UIKit.UITableViewController
+      
+      let bundle = R.hostingBundle
+      let name = "UserArticleDetail"
       
       fileprivate init() {}
     }

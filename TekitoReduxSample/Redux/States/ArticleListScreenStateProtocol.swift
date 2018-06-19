@@ -20,8 +20,9 @@ protocol ArticleListScreenStateProtocol {
 }
 
 extension ArticleListScreenStateProtocol {
-    mutating func updateArticleList(articleList: [ArticleModel]?) {
+    mutating func update(articleList: [ArticleModel]?) {
         self.articleList = articleList
+        incrementPageNumber()
     }
     
     mutating func append(articleList: [ArticleModel]?) {

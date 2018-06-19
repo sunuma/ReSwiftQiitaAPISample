@@ -9,9 +9,14 @@
 import UIKit
 import ReSwift
 
+enum ListLoadType {
+    case refresh
+    case more
+}
+
 class UserArticleListViewController: UITableViewController {
     @IBOutlet weak var loadingFooterView: MoreLoadingFooterView!
-    let refreshUI = UIRefreshControl()
+    private let refreshUI = UIRefreshControl()
     // Reswift protocol
     var listState: ArticleListScreenStateProtocol!
     var listActionCreator: ListStateActionCreatorProtocol!
@@ -33,8 +38,16 @@ class UserArticleListViewController: UITableViewController {
         refreshData()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        mainStore.unsubscribe(self)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     private func setupUI() {
-        tableView.prefetchDataSource = self
         tableView.rowHeight = CellHeightType.articleList.rawValue
         tableView.addSubview(refreshUI)
         refreshUI.addTarget(self, action: #selector(UserArticleListViewController.refreshData), for: .valueChanged)
@@ -46,34 +59,41 @@ class UserArticleListViewController: UITableViewController {
         let param = GetArticleEndpointParam(perPage: 20, page: listState.pageNumber)
         if let userId = listState.userId {
             let request = GetUserArticleEndpoint(userId: userId, param: param)
-            let actionCreator = ArticleAPIActionCreator.call(request: request, success: { [weak self] result in
-                self?.refreshDataHandler(result: result)
-            }, failed: { [weak self] error in
-                self?.articleEndPointHandler(error: error)
-            })
-            mainStore.dispatch(actionCreator)
+            requestArticleList(request: request)
         } else {
             let request = GetAllArticleEndPoint(param: param)
-            let actionCreator = ArticleAPIActionCreator.call(request: request, success: { [weak self] result in
-                self?.refreshDataHandler(result: result)
-            }, failed: { [weak self] error in
-                self?.articleEndPointHandler(error: error)
-            })
-            mainStore.dispatch(actionCreator)
+            requestArticleList(request: request)
+        }
+    }
+    
+    private func requestArticleList<T: QiitaAPIRequest>(request: T, type: ListLoadType = .refresh) {
+        let observer = ArticleAPIActionCreator().fetchArticleListActionObservable(request: request)
+        _ = observer.subscribe { [weak self] event in
+            switch event {
+            case .next(let result):
+                if type == .refresh {
+                    self?.refreshDataHandler(result: result)
+                } else {
+                    self?.moreListResponseHandler(result: result)
+                }
+            case .error(let error):
+                self?.articleEndPointHandler(error: .resultError(error))
+            case .completed:
+                appPrint("fetchArticleListActionObservable subscribe completed")
+            }
         }
     }
     
     private func refreshDataHandler(result: ArticleListModel) {
-        let loadingAction = LoadingState.LoadingAction(isLoading: false)
-        mainStore.dispatch(loadingAction)
+        mainStore.dispatch(LoadingState.LoadingAction(isLoading: false))
         let pageNumber = listState.pageNumber
-        let actionCreator = listActionCreator.generateRefreshAction(pageNumber, isRefresh: false)
-        mainStore.dispatch(actionCreator)
-        let resultAction = listActionCreator.generateResultAction(result)
-        mainStore.dispatch(resultAction)
+        mainStore.dispatch(listActionCreator.generateRefreshAction(pageNumber, isRefresh: false))
+        mainStore.dispatch(listActionCreator.generateResultAction(result))
     }
     
     private func articleEndPointHandler(error: ApiError) {
+        mainStore.dispatch(LoadingState.LoadingAction(isLoading: false))
+        mainStore.dispatch(listActionCreator.generateShowMoreLoadingAction(false))
     }
 }
 
@@ -90,35 +110,40 @@ extension UserArticleListViewController {
         return ArticleListCell()
     }
     
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let article = listState.fetchArticle(index: indexPath.row)
+        let action = ArticleDetailState.ArticleDetailIdAction(articleId: article.fetchId())
+        mainStore.dispatch(action)
+        let vc = R.storyboard.articleDetail.instantiateInitialViewController()!
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
-extension UserArticleListViewController: UITableViewDataSourcePrefetching {
-    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        print("___________ prefetchRowsAt")
-        let param = GetArticleEndpointParam(perPage: 20, page: listState.pageNumber)
+extension UserArticleListViewController {
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentOffsetY = scrollView.contentOffset.y
+        let maxOffsetY = scrollView.contentSize.height - scrollView.frame.height
+        let distanceToBottom = maxOffsetY - currentOffsetY
+        if distanceToBottom < 300 && !mainStore.state.loading.isLoading {
+            loadMoreListData()
+        }
+    }
+    
+    private func loadMoreListData() {
+        mainStore.dispatch(LoadingState.LoadingAction(isLoading: true))
+        let pageNumber = listState.pageNumber
+        appPrint("___________ loadMoreListData pageNumber = \(pageNumber)")
+        let param = GetArticleEndpointParam(perPage: 20, page: pageNumber)
         if let userId = listState.userId {
             let request = GetUserArticleEndpoint(userId: userId, param: param)
-            let actionCreator = ArticleAPIActionCreator.call(request: request, success: { result in
-                self.moreListResponseHandler(result: result)
-            }, failed: { [weak self] error in
-                self?.articleEndPointHandler(error: error)
-            })
-            mainStore.dispatch(actionCreator)
+            requestArticleList(request: request, type: .more)
         } else {
             let request = GetAllArticleEndPoint(param: param)
-            let actionCreator = ArticleAPIActionCreator.call(request: request, success: { result in
-                self.moreListResponseHandler(result: result)
-            }, failed: { [weak self] error in
-                self?.articleEndPointHandler(error: error)
-            })
-            mainStore.dispatch(actionCreator)
+            requestArticleList(request: request, type: .more)
         }
     }
     
     private func moreListResponseHandler(result: ArticleListModel) {
-        mainStore.dispatch(listActionCreator.generateShowMoreLoadingAction(false))
         if let artileList = result.articleModels, artileList.count != 0 {
             let action = listActionCreator.generateMoreListResultAction(artileList)
             mainStore.dispatch(action)
@@ -126,6 +151,7 @@ extension UserArticleListViewController: UITableViewDataSourcePrefetching {
             let action = listActionCreator.generateFinishMoreListAction(true)
             mainStore.dispatch(action)
         }
+        mainStore.dispatch(LoadingState.LoadingAction(isLoading: false))
     }
 }
 
@@ -133,7 +159,7 @@ extension UserArticleListViewController: StoreSubscriber {
     typealias StoreSubscriberStateType = AppState
     
     func newState(state: AppState) {
-        if let userId = listState.userId {
+        if let _ = listState.userId {
             //listState = state.userArticleList
         } else {
             listState = state.home
@@ -151,9 +177,10 @@ extension UserArticleListViewController: StoreSubscriber {
 
 extension UserArticleListViewController {
     private func showErrorDialog() {
-        let alert = UIAlertController(title: "エラー", message:
-            "", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        let info = AlertInfo()
+        let alert = UIAlertController(title: info.titleError, message:
+            info.messageEmpty, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: info.titleOK, style: .default, handler: nil))
         navigationController?.present(alert, animated: true, completion: nil)
     }
     

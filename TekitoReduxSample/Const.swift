@@ -15,3 +15,9 @@ let githubAPIHost = "https://github.com"
 //    case signup(name: String, password: String)
 //
 //}
+
+struct AlertInfo {
+    let titleError = "エラー"
+    let messageEmpty = ""
+    let titleOK = "OK"
+}

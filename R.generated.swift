@@ -69,14 +69,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 5 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
   struct storyboard {
     /// Storyboard `ArticleDetail`.
     static let articleDetail = _R.storyboard.articleDetail()
-    /// Storyboard `LaunchScreen`.
-    static let launchScreen = _R.storyboard.launchScreen()
-    /// Storyboard `Main`.
-    static let main = _R.storyboard.main()
     /// Storyboard `UserArticleDetail`.
     static let userArticleDetail = _R.storyboard.userArticleDetail()
     /// Storyboard `UserArticleList`.
@@ -85,16 +81,6 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "ArticleDetail", bundle: ...)`
     static func articleDetail(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.articleDetail)
-    }
-    
-    /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
-    static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
-    }
-    
-    /// `UIStoryboard(name: "Main", bundle: ...)`
-    static func main(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.main)
     }
     
     /// `UIStoryboard(name: "UserArticleDetail", bundle: ...)`
@@ -139,24 +125,6 @@ struct _R {
       
       let bundle = R.hostingBundle
       let name = "ArticleDetail"
-      
-      fileprivate init() {}
-    }
-    
-    struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
-      typealias InitialController = UIKit.UIViewController
-      
-      let bundle = R.hostingBundle
-      let name = "LaunchScreen"
-      
-      fileprivate init() {}
-    }
-    
-    struct main: Rswift.StoryboardResourceWithInitialControllerType {
-      typealias InitialController = ViewController
-      
-      let bundle = R.hostingBundle
-      let name = "Main"
       
       fileprivate init() {}
     }

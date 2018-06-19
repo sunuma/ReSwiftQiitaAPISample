@@ -14,7 +14,6 @@
 		7383064720A2E86900CD28E8 /* AppDelegate+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383064620A2E86900CD28E8 /* AppDelegate+Setup.swift */; };
 		7383064920A2E93900CD28E8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383064820A2E93900CD28E8 /* AppState.swift */; };
 		73974DAB20D75243007DE868 /* UserArticleDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73974DA920D75243007DE868 /* UserArticleDetail.storyboard */; };
-		73974DAE20D752CA007DE868 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73974DAC20D752CA007DE868 /* Main.storyboard */; };
 		73974DB120D753AB007DE868 /* ArticleDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73974DAF20D753AB007DE868 /* ArticleDetail.storyboard */; };
 		73974DB320D75450007DE868 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73974DB220D75450007DE868 /* ArticleDetailViewController.swift */; };
 		73974DB520D75582007DE868 /* ArticleDetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73974DB420D75582007DE868 /* ArticleDetailState.swift */; };
@@ -35,7 +34,6 @@
 		73ADE96E209323D8004211E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADE96D209323D8004211E1 /* AppDelegate.swift */; };
 		73ADE970209323D8004211E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADE96F209323D8004211E1 /* ViewController.swift */; };
 		73ADE975209323D8004211E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73ADE974209323D8004211E1 /* Assets.xcassets */; };
-		73ADE978209323D8004211E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73ADE976209323D8004211E1 /* LaunchScreen.storyboard */; };
 		73ADE983209323D8004211E1 /* TekitoReduxSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADE982209323D8004211E1 /* TekitoReduxSampleTests.swift */; };
 		73ADE98E209323D8004211E1 /* TekitoReduxSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADE98D209323D8004211E1 /* TekitoReduxSampleUITests.swift */; };
 		73E0A01120C61E3600529FB1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E0A00F20C61E3600529FB1 /* Realm.framework */; };
@@ -109,7 +107,6 @@
 		7383064620A2E86900CD28E8 /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
 		7383064820A2E93900CD28E8 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		73974DAA20D75243007DE868 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserArticleDetail.storyboard; sourceTree = "<group>"; };
-		73974DAD20D752CA007DE868 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73974DB020D753AB007DE868 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ArticleDetail.storyboard; sourceTree = "<group>"; };
 		73974DB220D75450007DE868 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		73974DB420D75582007DE868 /* ArticleDetailState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailState.swift; sourceTree = "<group>"; };
@@ -131,7 +128,6 @@
 		73ADE96D209323D8004211E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73ADE96F209323D8004211E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		73ADE974209323D8004211E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		73ADE977209323D8004211E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73ADE979209323D8004211E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73ADE97E209323D8004211E1 /* TekitoReduxSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TekitoReduxSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73ADE982209323D8004211E1 /* TekitoReduxSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekitoReduxSampleTests.swift; sourceTree = "<group>"; };
@@ -266,8 +262,6 @@
 		7383064320A2E7C500CD28E8 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				73974DAC20D752CA007DE868 /* Main.storyboard */,
-				73ADE976209323D8004211E1 /* LaunchScreen.storyboard */,
 				73974DAF20D753AB007DE868 /* ArticleDetail.storyboard */,
 				73E0A03520C66F8100529FB1 /* UserArticleList.storyboard */,
 				73974DA920D75243007DE868 /* UserArticleDetail.storyboard */,
@@ -546,8 +540,6 @@
 			files = (
 				73E0A03720C66F8100529FB1 /* UserArticleList.storyboard in Resources */,
 				73A01A4D20CA7FC400B4CA7B /* Secrets.plist in Resources */,
-				73ADE978209323D8004211E1 /* LaunchScreen.storyboard in Resources */,
-				73974DAE20D752CA007DE868 /* Main.storyboard in Resources */,
 				73974DAB20D75243007DE868 /* UserArticleDetail.storyboard in Resources */,
 				73ADE975209323D8004211E1 /* Assets.xcassets in Resources */,
 				73974DB120D753AB007DE868 /* ArticleDetail.storyboard in Resources */,
@@ -807,28 +799,12 @@
 			name = UserArticleDetail.storyboard;
 			sourceTree = "<group>";
 		};
-		73974DAC20D752CA007DE868 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				73974DAD20D752CA007DE868 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		73974DAF20D753AB007DE868 /* ArticleDetail.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				73974DB020D753AB007DE868 /* Base */,
 			);
 			name = ArticleDetail.storyboard;
-			sourceTree = "<group>";
-		};
-		73ADE976209323D8004211E1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				73ADE977209323D8004211E1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		73E0A03520C66F8100529FB1 /* UserArticleList.storyboard */ = {

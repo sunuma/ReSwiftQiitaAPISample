@@ -31,22 +31,40 @@ extension ArticleListScreenStateProtocol {
         incrementPageNumber()
     }
     
-    mutating func updateErrorMessage(error: ApiError) {
+    mutating func update(error: ApiError) {
         self.errorMessage = error.errorDescription()
     }
     
-    mutating func fetchArticle(index: Int) -> ArticleModel {
+    mutating func update(userId: String!) {
+        self.userId = userId
+    }
+    
+    mutating func update(pageNumber: Int) {
+        self.pageNumber = pageNumber
+    }
+    
+    mutating func update(showMoreLoading: Bool) {
+        self.showMoreLoading = showMoreLoading
+    }
+    
+    mutating func incrementPageNumber() {
+        pageNumber += 1
+    }
+}
+
+extension ArticleListScreenStateProtocol {
+    func fetchArticle(index: Int) -> ArticleModel {
         guard let articleList = articleList, articleList.count > index else {
             return ArticleModel()
         }
         return articleList[index]
     }
     
-    mutating func fetchArticleListCount() -> Int {
-        return articleList?.count ?? 0
+    func hasError() -> Bool {
+        return errorMessage != nil
     }
     
-    mutating func incrementPageNumber() {
-        pageNumber += 1
+    func fetchArticleListCount() -> Int {
+        return articleList?.count ?? 0
     }
 }

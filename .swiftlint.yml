@@ -6,6 +6,7 @@
 disabled_rules:
   - trailing_whitespace
   - operator_whitespace
+  - large_tuple
 
 # Lint対象外ファイル
 excluded:

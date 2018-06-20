@@ -12,5 +12,6 @@ import ReSwift
 func appReducer(action: Action, state: AppState?) -> AppState {
     return AppState(loading: loadingStateReducer(action: action, state: state?.loading),
                     home: homeStateReducer(action: action, state: state?.home),
-                    articleDetail: articleDetailReducer(action: action, state: state?.articleDetail))
+                    articleDetail: articleDetailReducer(action: action, state: state?.articleDetail),
+                    userArticleList: userArticleListReducer(action: action, state: state?.userArticleList))
 }

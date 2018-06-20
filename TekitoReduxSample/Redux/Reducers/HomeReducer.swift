@@ -19,7 +19,7 @@ func homeStateReducer(action: Action, state: HomeState?) -> HomeState {
             newState.update(articleList: articleList.articleModels)
         }
     case let action as HomeState.HomeArticleResultErrorAction:
-        newState.updateErrorMessage(error: action.error)
+        newState.update(error: action.error)
 //    case let action as HomeState.HomeFinishMoreArticleAction:
     case let action as HomeState.HomeMoreArticleResultAction:
         if let articleList = action.result as? [ArticleModel] {

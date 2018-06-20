@@ -11,6 +11,7 @@
 		73003CCB20CF692200F84293 /* HomeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73003CCA20CF692200F84293 /* HomeReducer.swift */; };
 		735FDB3D20D8928900F65067 /* StockStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FDB3C20D8928900F65067 /* StockStatus.swift */; };
 		735FDB3F20D89F5300F65067 /* ArticleDetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FDB3E20D89F5300F65067 /* ArticleDetailReducer.swift */; };
+		735FDB4220D8E99300F65067 /* GetArticleStockStatusEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FDB4120D8E99300F65067 /* GetArticleStockStatusEndPoint.swift */; };
 		7383064720A2E86900CD28E8 /* AppDelegate+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383064620A2E86900CD28E8 /* AppDelegate+Setup.swift */; };
 		7383064920A2E93900CD28E8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383064820A2E93900CD28E8 /* AppState.swift */; };
 		73974DAB20D75243007DE868 /* UserArticleDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73974DA920D75243007DE868 /* UserArticleDetail.storyboard */; };
@@ -36,6 +37,12 @@
 		73ADE975209323D8004211E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73ADE974209323D8004211E1 /* Assets.xcassets */; };
 		73ADE983209323D8004211E1 /* TekitoReduxSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADE982209323D8004211E1 /* TekitoReduxSampleTests.swift */; };
 		73ADE98E209323D8004211E1 /* TekitoReduxSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADE98D209323D8004211E1 /* TekitoReduxSampleUITests.swift */; };
+		73B4E7D620DA266C00717456 /* UserArticleListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B4E7D520DA266C00717456 /* UserArticleListState.swift */; };
+		73B4E7DA20DA276400717456 /* UserArticleListStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B4E7D920DA276400717456 /* UserArticleListStateAction.swift */; };
+		73B4E7DC20DA2C9900717456 /* UserArticleListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B4E7DB20DA2C9900717456 /* UserArticleListReducer.swift */; };
+		73B4E7DF20DA383F00717456 /* TekitoExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B4E7DE20DA383F00717456 /* TekitoExtension.swift */; };
+		73B4E7E120DA3C9400717456 /* HomeStateActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B4E7E020DA3C9400717456 /* HomeStateActionCreator.swift */; };
+		73B4E7E320DA3CC500717456 /* UserListStateActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B4E7E220DA3CC500717456 /* UserListStateActionCreator.swift */; };
 		73E0A01120C61E3600529FB1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E0A00F20C61E3600529FB1 /* Realm.framework */; };
 		73E0A01220C61E3600529FB1 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73E0A00F20C61E3600529FB1 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73E0A01320C61E3600529FB1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E0A01020C61E3600529FB1 /* RealmSwift.framework */; };
@@ -104,6 +111,7 @@
 		73003CCA20CF692200F84293 /* HomeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducer.swift; sourceTree = "<group>"; };
 		735FDB3C20D8928900F65067 /* StockStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockStatus.swift; sourceTree = "<group>"; };
 		735FDB3E20D89F5300F65067 /* ArticleDetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailReducer.swift; sourceTree = "<group>"; };
+		735FDB4120D8E99300F65067 /* GetArticleStockStatusEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArticleStockStatusEndPoint.swift; sourceTree = "<group>"; };
 		7383064620A2E86900CD28E8 /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
 		7383064820A2E93900CD28E8 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		73974DAA20D75243007DE868 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserArticleDetail.storyboard; sourceTree = "<group>"; };
@@ -135,6 +143,12 @@
 		73ADE989209323D8004211E1 /* TekitoReduxSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TekitoReduxSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73ADE98D209323D8004211E1 /* TekitoReduxSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekitoReduxSampleUITests.swift; sourceTree = "<group>"; };
 		73ADE98F209323D8004211E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73B4E7D520DA266C00717456 /* UserArticleListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserArticleListState.swift; sourceTree = "<group>"; };
+		73B4E7D920DA276400717456 /* UserArticleListStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserArticleListStateAction.swift; sourceTree = "<group>"; };
+		73B4E7DB20DA2C9900717456 /* UserArticleListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserArticleListReducer.swift; sourceTree = "<group>"; };
+		73B4E7DE20DA383F00717456 /* TekitoExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekitoExtension.swift; sourceTree = "<group>"; };
+		73B4E7E020DA3C9400717456 /* HomeStateActionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStateActionCreator.swift; sourceTree = "<group>"; };
+		73B4E7E220DA3CC500717456 /* UserListStateActionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListStateActionCreator.swift; sourceTree = "<group>"; };
 		73E0A00F20C61E3600529FB1 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		73E0A01020C61E3600529FB1 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		73E0A01A20C62A4800529FB1 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
@@ -232,6 +246,7 @@
 				73E0A04520C68B7100529FB1 /* HomeStateAction.swift */,
 				73EEC98E20CA186A002D2135 /* LoadingStateAction.swift */,
 				73974DBD20D7B1AE007DE868 /* ArticleDetailStateAction.swift */,
+				73B4E7D920DA276400717456 /* UserArticleListStateAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -243,6 +258,7 @@
 				73EEC99020CA1C75002D2135 /* LoadingStateReducer.swift */,
 				73003CCA20CF692200F84293 /* HomeReducer.swift */,
 				735FDB3E20D89F5300F65067 /* ArticleDetailReducer.swift */,
+				73B4E7DB20DA2C9900717456 /* UserArticleListReducer.swift */,
 			);
 			path = Reducers;
 			sourceTree = "<group>";
@@ -255,6 +271,7 @@
 				73E0A04120C6865000529FB1 /* HomeState.swift */,
 				73EEC98C20CA17F4002D2135 /* LoadingState.swift */,
 				73974DB420D75582007DE868 /* ArticleDetailState.swift */,
+				73B4E7D520DA266C00717456 /* UserArticleListState.swift */,
 			);
 			path = States;
 			sourceTree = "<group>";
@@ -304,6 +321,7 @@
 				73A01A3D20CA550D00B4CA7B /* GetUserArticleEndPoint.swift */,
 				73A01A4420CA655200B4CA7B /* GetAllArticleEndPoint.swift */,
 				73974DBB20D7A342007DE868 /* GetArticleDetailEndPoint.swift */,
+				735FDB4120D8E99300F65067 /* GetArticleStockStatusEndPoint.swift */,
 			);
 			path = EndPoints;
 			sourceTree = "<group>";
@@ -352,6 +370,7 @@
 				73E0A01920C62A2C00529FB1 /* Connects */,
 				7383064E20A2EEC300CD28E8 /* Models */,
 				7383063F20A2E78B00CD28E8 /* Redux */,
+				73B4E7DD20DA37FC00717456 /* Extensions */,
 				73A01A4B20CA7F8000B4CA7B /* Resource */,
 				73ADE974209323D8004211E1 /* Assets.xcassets */,
 				73ADE979209323D8004211E1 /* Info.plist */,
@@ -380,6 +399,14 @@
 				73ADE98F209323D8004211E1 /* Info.plist */,
 			);
 			path = TekitoReduxSampleUITests;
+			sourceTree = "<group>";
+		};
+		73B4E7DD20DA37FC00717456 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				73B4E7DE20DA383F00717456 /* TekitoExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		73E0A01920C62A2C00529FB1 /* Connects */ = {
@@ -418,6 +445,8 @@
 			children = (
 				73E0A03D20C6802800529FB1 /* ListStateActionCreator.swift */,
 				73A01A4220CA61A700B4CA7B /* ArticleAPIActionCreator.swift */,
+				73B4E7E020DA3C9400717456 /* HomeStateActionCreator.swift */,
+				73B4E7E220DA3CC500717456 /* UserListStateActionCreator.swift */,
 			);
 			path = Creators;
 			sourceTree = "<group>";
@@ -719,22 +748,28 @@
 				735FDB3D20D8928900F65067 /* StockStatus.swift in Sources */,
 				73E0A02A20C660E600529FB1 /* TagModel.swift in Sources */,
 				73A01A3C20CA507000B4CA7B /* QiitaAPIRequest.swift in Sources */,
+				735FDB4220D8E99300F65067 /* GetArticleStockStatusEndPoint.swift in Sources */,
 				73EEC98D20CA17F4002D2135 /* LoadingState.swift in Sources */,
+				73B4E7DF20DA383F00717456 /* TekitoExtension.swift in Sources */,
 				73E0A04220C6865000529FB1 /* HomeState.swift in Sources */,
 				73E0A04420C6872A00529FB1 /* ArticleListScreenStateProtocol.swift in Sources */,
 				73974DB520D75582007DE868 /* ArticleDetailState.swift in Sources */,
 				73974DBE20D7B1AE007DE868 /* ArticleDetailStateAction.swift in Sources */,
 				73E0A03920C67C1400529FB1 /* MoreLoadingFooterView.swift in Sources */,
+				73B4E7E120DA3C9400717456 /* HomeStateActionCreator.swift in Sources */,
 				73E0A04620C68B7100529FB1 /* HomeStateAction.swift in Sources */,
 				73EEC98F20CA186A002D2135 /* LoadingStateAction.swift in Sources */,
 				73E0A01D20C62A8900529FB1 /* HttpClient.swift in Sources */,
+				73B4E7D620DA266C00717456 /* UserArticleListState.swift in Sources */,
 				73ADE970209323D8004211E1 /* ViewController.swift in Sources */,
 				73E0A03E20C6802800529FB1 /* ListStateActionCreator.swift in Sources */,
 				73ADE96E209323D8004211E1 /* AppDelegate.swift in Sources */,
 				73A01A4320CA61A700B4CA7B /* ArticleAPIActionCreator.swift in Sources */,
+				73B4E7DA20DA276400717456 /* UserArticleListStateAction.swift in Sources */,
 				7383064720A2E86900CD28E8 /* AppDelegate+Setup.swift in Sources */,
 				7383064920A2E93900CD28E8 /* AppState.swift in Sources */,
 				73003CCB20CF692200F84293 /* HomeReducer.swift in Sources */,
+				73B4E7DC20DA2C9900717456 /* UserArticleListReducer.swift in Sources */,
 				73974DBC20D7A342007DE868 /* GetArticleDetailEndPoint.swift in Sources */,
 				73E0A01B20C62A4800529FB1 /* BaseRequest.swift in Sources */,
 				73A01A3A20CA4CEA00B4CA7B /* AppReducer.swift in Sources */,
@@ -748,6 +783,7 @@
 				73A01A4A20CA6D0B00B4CA7B /* ArticleListCell.swift in Sources */,
 				73974DC020D7B4D3007DE868 /* ArticleDetailBodyCell.swift in Sources */,
 				73974DB320D75450007DE868 /* ArticleDetailViewController.swift in Sources */,
+				73B4E7E320DA3CC500717456 /* UserListStateActionCreator.swift in Sources */,
 				73E0A02820C65FBB00529FB1 /* ArticleModel.swift in Sources */,
 				73EEC99120CA1C75002D2135 /* LoadingStateReducer.swift in Sources */,
 				73E0A03B20C67CC000529FB1 /* UserArticleListViewController.swift in Sources */,

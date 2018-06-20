@@ -26,7 +26,7 @@ struct HttpsClient {
                 }
                 if let data = response.data, let responseData = response.response {
                     guard let model = request.response(from: data, response: responseData) else {
-                        let message = "failed to \(String(describing: T.Response.self)).class json parse."
+                        let message = "😱 failed to \(String(describing: T.Response.self)).class json parse."
                         appPrint(message)
                         failure(.parseError(message))
                         return
@@ -35,23 +35,23 @@ struct HttpsClient {
                         //appDump(decodableData)
                         success(decodableData)
                     } else {
-                        let message = "failed to \(String(describing: T.Response.self)).class cast."
+                        let message = "😱 failed to \(String(describing: T.Response.self)).class cast."
                         appPrint(message)
                         failure(.castError(message))
                     }
                 } else {
                     var message = ""
                     if response.data == nil {
-                        message += "response.data is nil. "
+                        message += "😱 response.data is nil. "
                     }
                     if response.response == nil {
-                        message += "response.response is nil"
+                        message += "😱 response.response is nil"
                     }
                     appPrint(message)
                     failure(.invalidResponse(message))
                 }
             })
-        appPrint("request = \(req.description)")
+        appPrint("🍣 request = \(req.description)")
     }
 }
 
@@ -65,15 +65,15 @@ enum ApiError: Error {
         var message = ""
         switch self {
         case let .resultError(error):
-            message = "Result error = \(error.localizedDescription) "
+            message = "😱 Result error = \(error.localizedDescription) "
         case .invalidResponse(let msg):
-            message = "Invalid response: "
+            message = "😱 Invalid response: "
             if let value = msg { message += value }
         case .parseError(let msg):
-            message = "Parse error: "
+            message = "😱 Parse error: "
             if let value = msg { message += value }
         case .castError(let msg):
-            message = "Cast error: "
+            message = "😱 Cast error: "
             if let value = msg { message += value }
         }
         return message

@@ -9,20 +9,6 @@
 import UIKit
 import ReSwift
 
-let mainStore = Store(reducer: appReducer, state: nil)
-
-func appPrint(_ items: Any...) {
-    #if DEBUG
-    Swift.print(items)
-    #endif
-}
-
-func appDump<T>(_ value: T) {
-    #if DEBUG
-    Swift.dump(value)
-    #endif
-}
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

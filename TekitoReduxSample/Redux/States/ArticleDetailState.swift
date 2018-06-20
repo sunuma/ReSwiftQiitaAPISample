@@ -25,6 +25,22 @@ extension ArticleDetailState {
     mutating func update(articleDetail: ArticleModel?) {
         self.articleDetail = articleDetail
     }
+    
+    mutating func update(error: ApiError) {
+        self.error = error
+    }
+    
+    mutating func update(fetchingStockStatus: Bool) {
+        self.fetchStockStatus = fetchingStockStatus
+    }
+    
+    mutating func update(stockStatus: StockStatus?) {
+        self.stockStatus = stockStatus
+    }
+    
+    mutating func update(stockUsers: UserListModel?) {
+        self.stockUsers = stockUsers
+    }
 }
 
 extension ArticleDetailState {

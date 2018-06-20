@@ -14,7 +14,6 @@ enum CellHeightType: CGFloat {
 }
 
 class ArticleListCell: UITableViewCell {
-    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var postedInfoLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!

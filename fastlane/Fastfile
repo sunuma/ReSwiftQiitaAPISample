@@ -1,0 +1,37 @@
+fastlane_version "2.68.0"
+generated_fastfile_id "354ab528-6350-4ac8-965c-767781ff1f3d"
+default_platform :ios
+
+platform :ios do
+
+before_all do
+  cocoapods
+end
+
+lane :dev do
+
+  sigh(
+      development: true,
+      app_identifier: "com.tekito.unuma.TekitoReduxSample"
+  )
+
+  build_app(
+      scheme: "TekitoReduxSample",
+      configuration: "Debug",
+      output_directory: "build",
+      export_method: "development",
+      clean: true
+  )
+
+  # upload to DistributeTest by Crashlytics
+  crashlytics(
+      api_token: ENV['FABRIC_API_TOKEN'],
+      build_secret: ENV['FABRIC_BUILD_SECRET'],
+      notes: ENV['RELEASE_NOTES_DESC'],
+      notifications: true,
+      emails: [ ENV['FABRIC_NOTIFICATION_MAIL'] ]
+  )
+
+end
+
+end

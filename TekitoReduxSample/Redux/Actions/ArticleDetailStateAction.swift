@@ -21,4 +21,16 @@ extension ArticleDetailState {
     struct ArticleDetailErrorAction: Action {
         let error: ApiError
     }
+    
+    struct FetchingStockStatusAction: Action {
+        let isFetchingStockStatus: Bool
+    }
+    
+    struct ArticleDetailHasStockAction: Action {
+        let hasStock: Bool
+    }
+    
+    struct UserArticleDetailErrorAction: Action {
+        let error: ApiError
+    }
 }

@@ -22,7 +22,7 @@ extension ArticleListModel {
                 list.append(article)
             }
         } catch {
-            print("ArticleListModel initialize error = \(error.localizedDescription)")
+            appPrint("ArticleListModel initialize error = \(error.localizedDescription)")
         }
         self.init(articleModels: list)
     }

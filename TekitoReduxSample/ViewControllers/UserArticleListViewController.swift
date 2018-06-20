@@ -33,6 +33,7 @@ class UserArticleListViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        title = listState.title
         setupUI()
         mainStore.subscribe(self)
         refreshData()
@@ -79,7 +80,7 @@ class UserArticleListViewController: UITableViewController {
             case .error(let error):
                 self?.articleEndPointHandler(error: .resultError(error))
             case .completed:
-                appPrint("fetchArticleListActionObservable subscribe completed")
+                appPrint("🍣 fetchArticleListActionObservable subscribe completed")
             }
         }
     }
@@ -159,11 +160,7 @@ extension UserArticleListViewController: StoreSubscriber {
     typealias StoreSubscriberStateType = AppState
     
     func newState(state: AppState) {
-        if let _ = listState.userId {
-            //listState = state.userArticleList
-        } else {
-            listState = state.home
-        }
+        listState = listState.userId != nil ? state.userArticleList : state.home
 //        if listState.hasError() {
 //            showErrorDialog()
 //            return

@@ -31,10 +31,10 @@ extension QiitaAPIRequest where Response: Decodable {
         let decoder = JSONDecoder()
         do {
             let decodeData = try decoder.decode(Response.self, from: data)
+            //appDump(data)
             return decodeData
         } catch {
-            //print("Failed to decode json data. \n\(String(data: data, encoding: .utf8) ?? "")")
-            print("request error = \(error.localizedDescription)")
+            appPrint("request error = \(error.localizedDescription)")
             fatalError()
         }
         return nil

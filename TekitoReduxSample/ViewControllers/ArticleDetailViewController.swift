@@ -49,15 +49,15 @@ extension ArticleDetailViewController {
         let creator = ArticleAPIActionCreator()
         mainStore.dispatch(LoadingState.LoadingAction(isLoading: true))
         let observer = creator.fetchArticleDetailActionObservable(articleId: detailState.articleId)
-        _ = observer.subscribe { event in
+        _ = observer.subscribe { [weak self] event in
             mainStore.dispatch(LoadingState.LoadingAction(isLoading: false))
             switch event {
             case .next(let articleDetail):
                 let action = ArticleDetailState.ArticleDetailAction(articleDetail: articleDetail)
                 mainStore.dispatch(action)
-                //self?.fetchStockStatus()
+                self?.fetchStockStatus()
             case .completed:
-                print("fetchArticleDetailActionObservable subscribe complete")
+                appPrint("🍣 fetchArticleDetailActionObservable subscribe completed")
             case .error(let error):
                 mainStore.dispatch(LoadingState.LoadingAction(isLoading: false))
                 let action = ArticleDetailState.ArticleDetailErrorAction(error: .resultError(error))
@@ -68,6 +68,22 @@ extension ArticleDetailViewController {
     
     private func fetchStockStatus() {
         mainStore.dispatch(LoadingState.LoadingAction(isLoading: true))
+        mainStore.dispatch(ArticleDetailState.FetchingStockStatusAction(isFetchingStockStatus: true))
+        let observer = ArticleAPIActionCreator().fetchArticleStockStatusActionObservale(articleId: detailState.articleId)
+        _ = observer.subscribe { event in
+            mainStore.dispatch(LoadingState.LoadingAction(isLoading: false))
+            mainStore.dispatch(ArticleDetailState.FetchingStockStatusAction(isFetchingStockStatus: false))
+            switch event {
+            case .next(let result):
+                if let isHasStock = result.toBool() {
+                    mainStore.dispatch(ArticleDetailState.ArticleDetailHasStockAction(hasStock: isHasStock))
+                }
+            case .error(let error):
+                mainStore.dispatch(ArticleDetailState.ArticleDetailErrorAction(error: .resultError(error)))
+            case .completed:
+                appPrint("🍣 fetchArticleStockStatusActionObservale subsribe completed")
+            }
+        }
     }
 }
 
@@ -95,11 +111,11 @@ extension ArticleDetailViewController {
     private func createTopInfoCell(indexPath: IndexPath) -> ArticleDetailTopInfoCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.articleDetailTopInfoCell, for: indexPath)!
         cell.update(info: detailState.fetchArticleDetailTopInfo())
-        cell.selectedUserAction = { ueserId in
-            
+        cell.selectedUserAction = { [weak self] ueserId in
+            self?.segueUserArticleList(userId: ueserId)
         }
-        cell.updateStockButtonAction = {
-            
+        cell.updateStockButtonAction = { [weak self] in
+            self?.updateStockStatus()
         }
         return cell
     }
@@ -109,6 +125,16 @@ extension ArticleDetailViewController {
         cell.htmlWebView.delegate = self
         cell.loadRenderHtmlBody(html: detailState.fetchHtmlBody())
         return cell
+    }
+    
+    private func segueUserArticleList(userId: String) {
+        mainStore.dispatch(UserArticleListState.UserArticleListUserIdAction(userId: userId))
+        let vc = R.storyboard.userArticleList.instantiateInitialViewController()!
+        vc.inject(listState: mainStore.state.userArticleList, listActionCreator: UserListStateActionCreator())
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func updateStockStatus() {
     }
 }
 
